@@ -3,7 +3,8 @@
 /*акцент (ховер) #2196F3 */
 /*белый цвет #FFFFFF */
 /*цвет отклика кнопки #188ce8 */
-/*цвет бека херо и футера #2F303A */
+/*цвет бекграунда футера #2F303A */
+/*цвет бекграунда херо #C4C4C4 */
 /*цвет бека нашей команды #F5F4FA */
 /*цвет шрифта в адресе футера*/
 /*Цвет бордера на карточке в Портфолио*/
@@ -17,7 +18,8 @@
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
   --accent-btn-color: #188ce8;
-  --hero-footer-bground: #2f303a;
+  --hero-bground: #c4c4c4;
+  --footer-bground: #2f303a;
   --team-section-bground: #f5f4fa;
   --footer-adr-color: rgba(255, 255, 255, 0.6);
   --border-color: #eeeeee;
@@ -97,7 +99,7 @@ ol {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: 1px solid orange; */
+  outline: 1px solid orange;
 }
 
 /*=========HEADER========*/
@@ -113,7 +115,7 @@ ol {
   align-items: center;
   background-color: var(--primary-white-color);
 }
-
+/*=========LOGO=======*/
 .webstudio {
   font-family: var(--logo-font);
   display: flex;
@@ -129,7 +131,7 @@ ol {
 .web {
   color: rgb(33, 150, 243);
 }
-
+/*==========END LOGO========*/
 .navigation {
   display: flex;
   align-items: center;
@@ -153,11 +155,6 @@ ol {
   color: var(--title-text-color);
 }
 
-.menu-nav li {
-  display: inline-block;
-  font-size: 14px;
-}
-
 .mnav-item + .mnav-item {
   margin-left: 50px;
 }
@@ -168,55 +165,79 @@ ol {
 }
 
 .header-mail-tel {
-  list-style: none;
   display: flex;
   align-items: center;
   margin-left: auto;
 }
 
-.contact-email {
+.menu-nav li,
+.contact-email,
+.contact-tel {
   display: flex;
   align-items: center;
+  justify-content: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.contact-email {
   margin-right: 50px;
 }
 
-.contact-email a {
-  color: var(--prime-text-color);
-}
-
-.contact-email a:hover,
-.contact-email a:focus {
-  color: var(--accent-color);
-}
-
-.contact-tel {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
+.contact-email a,
 .contact-tel a {
   color: var(--prime-text-color);
 }
 
+.contact-email a:hover,
+.contact-email a:focus,
 .contact-tel a:hover,
-.contact-tel a:focus {
+.contact-tel a:focus,
+.email-icon a:hover,
+.email-icon a:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.contact-link {
+  display: flex;
+  justify-content: center;
+}
+.email-icon {
+  width: 16px;
+  height: 12px;
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.phone-icon {
+  width: 10px;
+  height: 16px;
+  fill: currentColor;
+  margin-right: 10px;
 }
 /*========HEADER END=======*/
 
 /*==========HERO===========*/
 
 .hero {
-  background-color: var(--hero-footer-bground);
+  background-color: var(--hero-bground);
+  max-width: 1600px;
+  min-height: 600px;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero .container {
@@ -359,6 +380,9 @@ ol {
   margin-left: 30px;
   margin-top: 30px;
   flex-basis: calc(100% / 4 - var(--card-set-gap));
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-name-container {
@@ -392,7 +416,7 @@ ol {
 /*=======FOOTER============*/
 
 .footer {
-  background: var(--hero-footer-bground);
+  background: var(--footer-bground);
   padding-top: 60px;
   padding-bottom: 60px;
 }
