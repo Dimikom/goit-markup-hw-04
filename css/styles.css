@@ -285,13 +285,32 @@ ol {
   padding-bottom: var(--section-inner-padding);
 }
 
-.our-spec-list {
+.our-spec-icon-box {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--team-section-bground);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.our-spec-item {
+  flex-basis: calc((100% / 4 - 30px));
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.our-spec-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: -15px;
 }
 
 .our-spec-item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 15px;
 }
 
 .our-spec-title {
