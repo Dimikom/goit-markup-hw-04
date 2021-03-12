@@ -191,17 +191,15 @@ ol {
   color: var(--prime-text-color);
 }
 
-.contact-email a:hover,
-.contact-email a:focus,
-.contact-tel a:hover,
-.contact-tel a:focus {
-  color: var(--accent-color);
-}
-
 .contact-link {
   display: flex;
   justify-content: center;
 }
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--accent-color);
+}
+
 .email-icon {
   width: 16px;
   height: 12px;
@@ -232,7 +230,7 @@ ol {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url('../images/hero.jpg');
+    url('../images/hero/hero.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
