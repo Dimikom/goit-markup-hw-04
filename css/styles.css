@@ -173,9 +173,7 @@ ol {
 .menu-nav li,
 .contact-email,
 .contact-tel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  list-style: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -194,6 +192,7 @@ ol {
 .contact-link {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -277,10 +276,22 @@ ol {
 
 /*======OUR SPECIATILY=====*/
 
-.our-spec .container {
-  display: flex;
+.our-spec {
   padding-top: var(--section-inner-padding);
   padding-bottom: var(--section-inner-padding);
+}
+
+.our-spec-list {
+  display: flex;
+}
+
+.our-spec-item {
+  flex-basis: calc((100% / 4 - 60px));
+  margin-left: 30px;
+}
+
+.our-spec-item:first-child {
+  margin-left: 0;
 }
 
 .our-spec-icon-box {
@@ -292,23 +303,6 @@ ol {
   background-color: var(--team-section-bground);
   border-radius: 4px;
   margin-bottom: 30px;
-}
-
-.our-spec-item {
-  flex-basis: calc((100% / 4 - 30px));
-  margin-left: 15px;
-  margin-top: 15px;
-}
-
-.our-spec-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: -15px;
-}
-
-.our-spec-item:not(:last-child) {
-  margin-right: 15px;
 }
 
 .our-spec-title {
@@ -401,8 +395,7 @@ ol {
 
 .team-name-container {
   margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
   border-radius: 0 0 5px 5px;
   background-color: var(--primary-white-color);
 }
@@ -429,14 +422,9 @@ ol {
 
 .social-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .social-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-right: 10px;
 }
 
@@ -485,7 +473,6 @@ ol {
 .customers-list {
   display: flex;
   justify-content: center;
-  margin: -30px;
 }
 
 .customer-icon {
