@@ -276,22 +276,20 @@ ol {
 
 /*======OUR SPECIATILY=====*/
 
-.our-spec {
+.our-spec .container {
   padding-top: var(--section-inner-padding);
   padding-bottom: var(--section-inner-padding);
 }
 
 .our-spec-list {
   display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .our-spec-item {
-  flex-basis: calc((100% / 4 - 60px));
-  margin-left: 30px;
-}
-
-.our-spec-item:first-child {
-  margin-left: 0;
+  flex-basis: calc((100% / 4 - 30px));
+  margin: 15px;
 }
 
 .our-spec-icon-box {
