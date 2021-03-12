@@ -528,6 +528,10 @@ ol {
   padding-bottom: 60px;
 }
 
+.footer-box {
+  display: flex;
+}
+
 .bottom-webstudio {
   color: var(--primary-white-color);
   font-family: var(--logo-font);
@@ -546,7 +550,7 @@ ol {
   margin-bottom: 9px;
 }
 
-.address-line {
+.address-line .link {
   color: var(--primary-white-color);
   font-weight: 400;
   font-size: 14px;
@@ -568,6 +572,52 @@ ol {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.footer-socials {
+  margin-top: 12px;
+  margin-left: 70px;
+}
+
+.footer-socials-title {
+  color: var(--primary-white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social-item {
+  display: flex;
+  flex-basis: calc(100% / 4 - 20px);
+  margin-left: 10px;
+}
+
+.footer-social-item:first-child {
+  margin-left: 0;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--primary-white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+  color: #fff;
 }
 /*======END FOOTER=========*/
 
