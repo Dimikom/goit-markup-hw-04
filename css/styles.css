@@ -478,12 +478,13 @@ ol {
 }
 
 .customers-item {
-  flex-basis: calc(100% / 5 - 60px);
+  flex-basis: calc(100% / 6 - 30px);
   margin-left: 30px;
 }
 
-.customers-item:last-child {
-  margin-right: 30px;
+.customers-item:first-child {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .customer-link {
@@ -515,6 +516,7 @@ ol {
 
 .footer-box {
   display: flex;
+  align-items: baseline;
 }
 
 .bottom-webstudio {
@@ -560,7 +562,6 @@ ol {
 }
 
 .footer-socials {
-  margin-top: 12px;
   margin-left: 70px;
 }
 
